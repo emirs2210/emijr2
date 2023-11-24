@@ -4,9 +4,9 @@
         <pattern>HOLA</pattern>
         <template>
             <random>
-                <li>Bienvenido, quiers saber cuales son las entradas o vamos a la sopa?</li>
-                <li>Buen dia, toma entrada o empieza con la sopa?</li>
-                <li>Sea bienvenida, le digo las entradas o pasamos a la sopa?</li>
+                <li>Bienvenido, quiers saber cuales son las entradas o vamos a las sopas?</li>
+                <li>Buen dia, toma entrada o empieza con las sopas?</li>
+                <li>Sea bienvenida, le digo las entradas o pasamos a las sopas?</li>
                 <li>Muy buen dia, quiere saber las entradas o elige sopa de una vez</li>
             </random>
         </template>
@@ -17,37 +17,106 @@
             <srai>ENTRADAS</srai>
         </template>
         </category>
+        
     <category>
         <pattern>ENTRADAS</pattern>
-        <template>Tenemos palitos de apio, ensalada o fruta picada</template>
+        <template>Tenemos palitos de apio o ensalada, quieres continuar con las sopas?</template>
     </category>
+    
     <category>
-        <pattern>SOPA</pattern>
+        <pattern>PALITOS DE APIO *</pattern>
+        <template>En un momento se lo traigo, quieres continuar con las sopas?</template>
+    </category>
+    
+    <category>
+        <pattern>ENSALADA *</pattern>
+        <template>En un momento se lo traigo, quieres continuar con las sopas?</template>
+    </category>
+    
+    
+    <category>
+    <pattern>SI</pattern>
+        <template>
+            <srai>SOPA *</srai>
+        </template>
+        </category>
+        
+    <category>
+    <pattern>QUIERO SOPA</pattern>
+        <template>
+            <srai>SOPA *</srai>
+        </template>
+        </category>
+        
+    <category>
+    <pattern>NO</pattern>
+        <template>
+            <srai>NO *</srai>
+        </template>
+        </category>
+    
+    
+    <category>
+        <pattern>SOPA *</pattern>
         <template>¿Quieres sopa del dia o consome?</template>
     </category>
     
     <category>
         <pattern>SOPA DEL DIA</pattern>
-        <template>Muy buena opcion, gustas algo mas agua?</template>
+        <template>Muy buena opcion, te gustaria tibia o caliente?</template>
     </category>
     
     <category>
-        <pattern>CONSOME</pattern>
-        <template>Muy buena opcion, gustas algo mas agua?</template>
+        <pattern>CONSOME *</pattern>
+        <template>Muy buena opcion, te gustaria tibia o caliente?</template>
     </category>
     
     <category>
-        <pattern>SI *</pattern>
-        <template>Okay en un momento mas se lo traigo</template>
+        <pattern>TIBIA *</pattern>
+        <template>De acuerdo, permiteme un momento. Tambien tenemos postres, gustas saber cuales tenemos?</template>
     </category>
     
     <category>
-        <pattern>NO *</pattern>
-        <template>Okay, cualquier cosa estoy para servirte</template>
+        <pattern>CALIENTE *</pattern>
+        <template>De acuerdo, permiteme un momento. Tambien tenemos postres, gustas saber cuales tenemos?</template>
     </category>
+    
+    <category>
+    <pattern>SI QUIERO SABER</pattern>
+        <template>
+            <srai>* POSTRE</srai>
+        </template>
+        </category>
+    
     
     <category>
         <pattern>LA * ESTA FRIA</pattern>
         <template>Una enorme disculpa, llevo su <star/> a calentar</template>
+    </category>
+    
+    <category>
+        <pattern>* POSTRE</pattern>
+        <template>Tenemos pastel de chocolate y pay de limon, Cual gustas? </template>
+    </category>
+    
+    
+    <category>
+        <pattern>PASTEL DE CHOCOLATE *</pattern>
+        <template>En un momento mas se lo traigo, le traigo la cuenta? </template>
+    </category>
+    
+    <category>
+        <pattern>PAY DE LIMON *</pattern>
+        <template>En un momento mas se lo traigo, le traigo la cuenta? </template>
+    </category>
+    
+    <category>
+        <pattern>SI *</pattern>
+        <template>Pediste mucho, me debes 3 millones. </template>
+    </category>
+    
+    <category>
+        <pattern>NO *</pattern>
+        <template>Cualquier cosa estamos a su servicio, vuelva a decir "HOLA", si gusta algo  mas. </template>
     </category>
 </aiml>
