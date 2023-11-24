@@ -2,8 +2,21 @@
 <aiml version="2.0">
     <category>
         <pattern>HOLA</pattern>
-        <template>Bienvenido. ¿Quieres saber cuales son las entradas o vamos a la sopa?</template>
+        <template>
+            <random>
+                <li>Bienvenido, quiers saber cuales son las entradas o vamos a la sopa?</li>
+                <li>Buen dia, toma entrada o empieza con la sopa?</li>
+                <li>Sea bienvenida, le digo las entradas o pasamos a la sopa?</li>
+                <li>Muy buen dia, quiere saber las entradas o elige sopa de una vez</li>
+            </random>
+        </template>
     </category>
+      <category>
+    <pattern>* ENTRADAS</pattern>
+        <template>
+            <srai>ENTRADAS</srai>
+        </template>
+        </category>
     <category>
         <pattern>ENTRADAS</pattern>
         <template>Tenemos palitos de apio, ensalada o fruta picada</template>
