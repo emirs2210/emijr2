@@ -25,4 +25,29 @@
         <pattern>SOPA</pattern>
         <template>¿Quieres sopa del dia o consome?</template>
     </category>
+    
+    <category>
+        <pattern>SOPA DEL DIA</pattern>
+        <template>Muy buena opcion, gustas algo mas agua?</template>
+    </category>
+    
+    <category>
+        <pattern>CONSOME</pattern>
+        <template>Muy buena opcion, gustas algo mas agua?</template>
+    </category>
+    
+    <category>
+        <pattern>SI *</pattern>
+        <template>Okay en un momento mas se lo traigo</template>
+    </category>
+    
+    <category>
+        <pattern>NO *</pattern>
+        <template>Okay, cualquier cosa estoy para servirte</template>
+    </category>
+    
+    <category>
+        <pattern>LA * ESTA FRIA</pattern>
+        <template>Una enorme disculpa, llevo su <star/> a calentar</template>
+    </category>
 </aiml>
